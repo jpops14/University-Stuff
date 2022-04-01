@@ -1,0 +1,63 @@
+#lang racket
+
+(struct const (val)    #:transparent)
+(struct binop (op l r) #:transparent)
+(struct variable ()    #:transparent)
+(struct unop (op l)       #:transparent)
+
+; 2 + 2 * x
+(define 2+2*x (binop '+ (const 2)
+                     (binop '* (const 2)
+                            (variable))))
+
+(define (expr? e)
+  (match e
+    [(variable)     true]
+    [(const n)      (number? n)]
+    [(binop op l r) (and (symbol? op) (expr? l) (expr? r))]
+    [(unop op l) (and (symbol? op) (expr? l))]
+    [_              false]))
+
+
+; Wartosci
+(define (value? v)
+  (number? v))
+
+(define (∂ node)
+  (match node
+    [(variable) (const 1)]
+    [(const n)  (const 0)]
+    [(binop '+ l r) (binop '+
+                           (∂ l)
+                           (∂ r))]
+    [(binop '* l r) (binop '+
+                           (binop '* (∂ l) r)
+                           (binop '* l (∂ r))
+                           )]
+    [(unop '∂ l) (∂ (∂ l))]))
+          
+
+(define (op->proc op)
+  (match op ['+ +] ['- -] ['* *] ['/ /]['∂ ∂]))
+
+(define (eval e x)
+  (match e
+    [(const n) n]
+    [(binop op l r) ((op->proc op) (eval l x) (eval r x))]
+    [(variable)  x]
+    [(unop op l) (eval ((op->proc op) l) x)])) 
+
+; ------------------------- ;
+; Trochę składni konkretnej ;
+; ------------------------- ;
+
+(define (parse q)
+  (cond [(number? q) (const q)]
+        [(eq? q 'x) (variable)]
+        [(and (list? q) (eq? (length q) 3) (symbol? (first q)))
+         (binop (first q) (parse (second q)) (parse (third q)))]
+        [(and (list? q) (eq? (length q) 2) (symbol? (first q)))
+         (unop (first q) (parse (second q)))]))
+
+(define (test-parse) (parse '(+ (* 2 x) (* x x))))
+(eval (parse '(∂ (∂ (* ( * x x) x )))) 1)

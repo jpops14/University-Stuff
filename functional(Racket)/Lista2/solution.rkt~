@@ -1,0 +1,38 @@
+#lang racket
+
+(provide integral)
+
+(define (sum val next a b)
+  (if (> a b)
+      0.0
+      (+ (val a) (sum val next (next a) b))))
+
+(define (integral f prec)
+  (lambda (x y)
+    (let ([section (/ (- y x) prec)])
+      (sum (lambda (x) (* (f x) section))
+           (lambda (x) (+ section x))
+           x
+           (- y section))))) 
+    
+     
+    
+  
+     
+          
+         
+  
+  
+    
+         
+        
+  
+;( define foo ( integral ( lambda ( x ) 10) 1000) )
+;( foo 0 10)
+;( define foo ( integral ( lambda ( x ) x ) 1000) )
+;( foo 9 10)
+;( foo 0 10)
+;( define foo ( integral sin 1000) )
+;( foo 0 (* pi 2) )
+;( foo 0 (/ pi 2) )
+;(( integral tan 1000) (/ pi -2) (/ pi 2) )

@@ -1,0 +1,40 @@
+#lang racket
+
+
+(provide
+  rows->board board-rows board-columns board-boxes ; Zad A
+  partial-solution-ok? solutions )                 ; Zad B
+
+;; =========
+;; Zadanie A
+;; =========
+
+;; Tworzy planszę z wierszy (listy list znaków z alfabetu)
+(define (rows->board xss)
+  xss)
+
+;; Ujawnia listę wierszy (każdy wiersz to lista znaków z alfabetu)
+(define (board-rows board)
+  board)
+
+;; Ujawnia listę kolumn (każda kolumna to lista znaków z alfabetu)
+(define (board-columns board)
+  (error "tu uzupełnij!"))
+
+;; Ujawnia listę pudełek (każde pudełko to lista znaków z alfabetu)
+(define (board-boxes board)
+  (error "tu uzupełnij!"))
+
+(define (nullist n)
+  (define (addlength x acc)
+    (if (equal? x 0) acc
+        (addlength (- x 1)
+                   (cons null acc))))
+  (addlength n null))
+    
+    
+  
+
+(define (zip xs ys)
+    (define (reduce x y acc) (cons (cons x y) acc))
+    (foldr reduce null xs ys))

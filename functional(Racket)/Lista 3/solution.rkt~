@@ -1,0 +1,33 @@
+#lang racket
+
+
+
+(provide null null? cons pair? car cdr)
+
+;(define null ... )
+
+;(define (null? x) ... )
+
+(define (cons x y)
+  (lambda (z)(cond
+               [(= z 0) x]
+               [(= z 1) y]
+               )))
+
+
+
+(define (pair? x)
+         (= x (cons (car x) (cdr x))))
+
+(define (car x)
+  (x 0))
+
+(define (cdr x)
+  (x 1))
+
+
+(define ( list-sum xs )
+   (if (null?  xs )
+       0
+       (+ ( car xs )
+          ( list-sum ( cdr xs ) ) ) ) )

@@ -1,0 +1,63 @@
+#lang racket
+
+
+(define (caesar alphabet key)
+
+;procedura rotate-left z ćwiczeń  
+  (define (rotate-left k l)
+    (define (length xs)
+      (if (null? xs)
+          0
+          (+ 1 (length (cdr xs)))))
+    (define (left l  k)
+      (cond [(= k 0) l] 
+            [(null? l) null]
+            [else (left
+                   (append (cdr l) (cons (car l) null))
+                   (- k 1))]))
+    (left l (modulo k (length l))))
+ 
+  (define (zip xs ys)
+    (define (reduce x y acc) (cons (cons x y) acc))
+    (foldr reduce null xs ys))
+
+  (define slownik (zip
+                   (rotate-left key alphabet)
+                   alphabet))
+
+  (define (encode-symbol s)
+    (define (lookup a xs)
+      (if (= a (car (car xs)))
+          (cdr (car xs))
+          (lookup a (cdr xs))))
+    (lookup (s slownik)))
+  
+  (define (decode-symbol s)
+    (define (lookup a xs)
+      (if (= a (cdr (car xs)))
+          (car (car xs))
+          (lookup a (cdr xs))))
+    (lookup (s slownik)))
+
+  (define (encode x) (foldr encode-symbol null x))
+  (define (decode x) (foldr decode-symbol null x))
+
+  (cons encode decode))
+  
+    
+    
+          
+
+
+
+  
+
+  
+      
+    
+
+  
+
+  
+  
+  
