@@ -1,0 +1,67 @@
+\hypertarget{classShips}{}\doxysection{Ships Class Reference}
+\label{classShips}\index{Ships@{Ships}}
+
+
+Inheritance diagram for Ships\+:
+% FIG 0
+
+
+Collaboration diagram for Ships\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classShips_a3d2205a5f65fed66b06f60499c006ad6}{Ships}} ()
+\item 
+String \mbox{\hyperlink{classShips_a2d174302e3980eae627944d47a5b347b}{hit}} (int id)
+\item 
+int \mbox{\hyperlink{classShips_a1c821d30fcccb4e31109a692ee970875}{get\+Ship\+HP}} (int id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents ships\textquotesingle{} statuses. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classShips_a3d2205a5f65fed66b06f60499c006ad6}\label{classShips_a3d2205a5f65fed66b06f60499c006ad6}} 
+\index{Ships@{Ships}!Ships@{Ships}}
+\index{Ships@{Ships}!Ships@{Ships}}
+\doxysubsubsection{\texorpdfstring{Ships()}{Ships()}}
+{\footnotesize\ttfamily Ships.\+Ships (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds a new ship hitpoints registry, gives every ship default number of hitpoints. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classShips_a1c821d30fcccb4e31109a692ee970875}\label{classShips_a1c821d30fcccb4e31109a692ee970875}} 
+\index{Ships@{Ships}!getShipHP@{getShipHP}}
+\index{getShipHP@{getShipHP}!Ships@{Ships}}
+\doxysubsubsection{\texorpdfstring{getShipHP()}{getShipHP()}}
+{\footnotesize\ttfamily int Ships.\+get\+Ship\+HP (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Read\textquotesingle{}s hitpoints of ship desribed by given id. 
+\begin{DoxyParams}{Parameters}
+{\em id} & ship\textquotesingle{}s id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+remaining Hit\+Points of ship with given id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classShips_a2d174302e3980eae627944d47a5b347b}\label{classShips_a2d174302e3980eae627944d47a5b347b}} 
+\index{Ships@{Ships}!hit@{hit}}
+\index{hit@{hit}!Ships@{Ships}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily String Ships.\+hit (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Registers hit on the ship and returns attack report. 
+\begin{DoxyParams}{Parameters}
+{\em id} & id of attacked ship \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+attack report. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ships.\+java\end{DoxyCompactItemize}

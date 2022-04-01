@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1612960678 source:/home/jakub/pracownia C/Projekt323236/battleshipMechanics.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"battleshipMechanics.h"
+	"battleshipsUI.h"
+
+1612959828 /home/jakub/pracownia C/Projekt323236/battleshipMechanics.h
+
+1612956144 /home/jakub/pracownia C/Projekt323236/battleshipsUI.h
+
+1612956458 source:/home/jakub/pracownia C/Projekt323236/main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"gamemaster.h"
+	"menu.h"
+	<stdbool.h>
+	"battleshipsUI.h"
+
+1612274104 /home/jakub/pracownia C/Projekt323236/gamemaster.h
+
+1612274102 /home/jakub/pracownia C/Projekt323236/menu.h
+

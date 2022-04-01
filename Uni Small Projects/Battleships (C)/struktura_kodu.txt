@@ -1,0 +1,6 @@
+Kod programu został podzielony na następujące moduły:
+main - moduł główny
+menu - moduł zawierający funkcje obsługujące menu i wyświetlanie pomocy
+gamemaster - moduł przeprowadzający grę
+battleshipMechanics - moduł obsługujący mechanikę gry (wykonywanie ruchów, rozstawianie statków, przyjmowanie poleceń użytkownika)
+battleshipUI - moduł zawierająćy funkcje wyświetlające interface gry

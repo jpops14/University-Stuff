@@ -1,0 +1,85 @@
+\begin{theindex}
+
+  \item {attack}
+    \subitem {GameState}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Board}, \hyperpage{5}
+
+  \indexspace
+
+  \item {encapsulate}
+    \subitem {GamePrep}, \hyperpage{8}
+
+  \indexspace
+
+  \item {GameMaster}, \hyperpage{5}
+    \subitem {GameMaster}, \hyperpage{5}
+    \subitem {getField}, \hyperpage{6}
+    \subitem {getPlayerHealth}, \hyperpage{6}
+    \subitem {getTurn}, \hyperpage{6}
+    \subitem {makeMove}, \hyperpage{7}
+    \subitem {saveGame}, \hyperpage{7}
+  \item {GameMasterGUI}, \hyperpage{8}
+  \item {GamePrep}, \hyperpage{8}
+    \subitem {encapsulate}, \hyperpage{8}
+    \subitem {GamePrep}, \hyperpage{8}
+    \subitem {loadGame}, \hyperpage{9}
+    \subitem {makePlacement}, \hyperpage{9}
+  \item {GamePrepGUI}, \hyperpage{10}
+  \item {GameState}, \hyperpage{10}
+    \subitem {attack}, \hyperpage{11}
+    \subitem {GameState}, \hyperpage{11}
+    \subitem {getField}, \hyperpage{12}
+    \subitem {getPlayerHealth}, \hyperpage{12}
+    \subitem {getTurn}, \hyperpage{13}
+    \subitem {turnInc}, \hyperpage{13}
+  \item {getField}
+    \subitem {GameMaster}, \hyperpage{6}
+    \subitem {GameState}, \hyperpage{12}
+  \item {getPlayerHealth}
+    \subitem {GameMaster}, \hyperpage{6}
+    \subitem {GameState}, \hyperpage{12}
+  \item {getShipHP}
+    \subitem {Ships}, \hyperpage{14}
+  \item {getTurn}
+    \subitem {GameMaster}, \hyperpage{6}
+    \subitem {GameState}, \hyperpage{13}
+
+  \indexspace
+
+  \item {hit}
+    \subitem {Ships}, \hyperpage{15}
+
+  \indexspace
+
+  \item {loadGame}
+    \subitem {GamePrep}, \hyperpage{9}
+
+  \indexspace
+
+  \item {makeMove}
+    \subitem {GameMaster}, \hyperpage{7}
+  \item {makePlacement}
+    \subitem {GamePrep}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Program}, \hyperpage{13}
+
+  \indexspace
+
+  \item {saveGame}
+    \subitem {GameMaster}, \hyperpage{7}
+  \item {Ships}, \hyperpage{14}
+    \subitem {getShipHP}, \hyperpage{14}
+    \subitem {hit}, \hyperpage{15}
+    \subitem {Ships}, \hyperpage{14}
+
+  \indexspace
+
+  \item {turnInc}
+    \subitem {GameState}, \hyperpage{13}
+
+\end{theindex}

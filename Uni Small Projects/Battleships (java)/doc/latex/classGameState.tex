@@ -1,0 +1,146 @@
+\hypertarget{classGameState}{}\doxysection{Game\+State Class Reference}
+\label{classGameState}\index{GameState@{GameState}}
+
+
+Inheritance diagram for Game\+State\+:
+% FIG 0
+
+
+Collaboration diagram for Game\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameState_a25dca76df99fda907f9dcc5ad6789d08}{Game\+State}} ()
+\item 
+\mbox{\hyperlink{classGameState_ab396ad04751aefe45b220d717abb5e31}{Game\+State}} (\mbox{\hyperlink{classBoard}{Board}} p1, \mbox{\hyperlink{classBoard}{Board}} p2)
+\item 
+\mbox{\hyperlink{classGameState_aa3de7f71241b1de3f4a03cbdbce3d573}{Game\+State}} (\mbox{\hyperlink{classBoard}{Board}} p1, \mbox{\hyperlink{classBoard}{Board}} p2, \mbox{\hyperlink{classShips}{Ships}} ready\+\_\+ships)
+\item 
+void \mbox{\hyperlink{classGameState_a5d484cac161a57b1c1f8323d9661c8df}{turn\+Inc}} ()
+\item 
+int \mbox{\hyperlink{classGameState_a3c7afead98fde6ede1294485f56a184d}{get\+Turn}} ()
+\item 
+String \mbox{\hyperlink{classGameState_af59cdc1d00c9a85ecebfdc1c2ff8003e}{attack}} (int x, int y)
+\item 
+int \mbox{\hyperlink{classGameState_a5a5612ca2eb17ca1016147d79154da00}{get\+Player\+Health}} (int nr)
+\item 
+int \mbox{\hyperlink{classGameState_aeffbbab33da21f98076d50e0cdbba090}{get\+Field}} (int player, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents state of a single game of Battleships. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameState_a25dca76df99fda907f9dcc5ad6789d08}\label{classGameState_a25dca76df99fda907f9dcc5ad6789d08}} 
+\index{GameState@{GameState}!GameState@{GameState}}
+\index{GameState@{GameState}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{GameState()}{GameState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Game\+State.\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new default gamestate with empty Boards. \mbox{\Hypertarget{classGameState_ab396ad04751aefe45b220d717abb5e31}\label{classGameState_ab396ad04751aefe45b220d717abb5e31}} 
+\index{GameState@{GameState}!GameState@{GameState}}
+\index{GameState@{GameState}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{GameState()}{GameState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Game\+State.\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}}}]{p1,  }\item[{\mbox{\hyperlink{classBoard}{Board}}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new default game-\/ready gamestate with given prepared boards. 
+\begin{DoxyParams}{Parameters}
+{\em p1} & player 1\textquotesingle{}s board. \\
+\hline
+{\em p2} & player 2\textquotesingle{}s board. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGameState_aa3de7f71241b1de3f4a03cbdbce3d573}\label{classGameState_aa3de7f71241b1de3f4a03cbdbce3d573}} 
+\index{GameState@{GameState}!GameState@{GameState}}
+\index{GameState@{GameState}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{GameState()}{GameState()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Game\+State.\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}}}]{p1,  }\item[{\mbox{\hyperlink{classBoard}{Board}}}]{p2,  }\item[{\mbox{\hyperlink{classShips}{Ships}}}]{ready\+\_\+ships }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new default game-\/ready gamestate with given prepared boards and ships registry. 
+\begin{DoxyParams}{Parameters}
+{\em p1} & player 1\textquotesingle{}s board. \\
+\hline
+{\em p2} & player 2\textquotesingle{}s board. \\
+\hline
+{\em ready\+\_\+ships} & ships registry \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGameState_af59cdc1d00c9a85ecebfdc1c2ff8003e}\label{classGameState_af59cdc1d00c9a85ecebfdc1c2ff8003e}} 
+\index{GameState@{GameState}!attack@{attack}}
+\index{attack@{attack}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily String Game\+State.\+attack (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Performs attack on board (adequate to turn number) using given coordinates. 
+\begin{DoxyParams}{Parameters}
+{\em x} & row. \\
+\hline
+{\em y} & column. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+attack report. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameState_aeffbbab33da21f98076d50e0cdbba090}\label{classGameState_aeffbbab33da21f98076d50e0cdbba090}} 
+\index{GameState@{GameState}!getField@{getField}}
+\index{getField@{getField}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{getField()}{getField()}}
+{\footnotesize\ttfamily int Game\+State.\+get\+Field (\begin{DoxyParamCaption}\item[{int}]{player,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns content of field (desribed by given coordinates) on designated player\textquotesingle{}s board. 
+\begin{DoxyParams}{Parameters}
+{\em nr} & player number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+content of board\textquotesingle{}s field. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameState_a5a5612ca2eb17ca1016147d79154da00}\label{classGameState_a5a5612ca2eb17ca1016147d79154da00}} 
+\index{GameState@{GameState}!getPlayerHealth@{getPlayerHealth}}
+\index{getPlayerHealth@{getPlayerHealth}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{getPlayerHealth()}{getPlayerHealth()}}
+{\footnotesize\ttfamily int Game\+State.\+get\+Player\+Health (\begin{DoxyParamCaption}\item[{int}]{nr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns number of designated player\textquotesingle{}s remaining hitpoints. 
+\begin{DoxyParams}{Parameters}
+{\em nr} & player number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+player\textquotesingle{}s remaining hitpoints. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameState_a3c7afead98fde6ede1294485f56a184d}\label{classGameState_a3c7afead98fde6ede1294485f56a184d}} 
+\index{GameState@{GameState}!getTurn@{getTurn}}
+\index{getTurn@{getTurn}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{getTurn()}{getTurn()}}
+{\footnotesize\ttfamily int Game\+State.\+get\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reads turn number. \begin{DoxyReturn}{Returns}
+turn number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameState_a5d484cac161a57b1c1f8323d9661c8df}\label{classGameState_a5d484cac161a57b1c1f8323d9661c8df}} 
+\index{GameState@{GameState}!turnInc@{turnInc}}
+\index{turnInc@{turnInc}!GameState@{GameState}}
+\doxysubsubsection{\texorpdfstring{turnInc()}{turnInc()}}
+{\footnotesize\ttfamily void Game\+State.\+turn\+Inc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Increments number of turns.$\ast$ Performs attack on board (adequate to turn number) using given coordinates. 
+\begin{DoxyParams}{Parameters}
+{\em x} & row \\
+\hline
+{\em y} & column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+attack report 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game\+State.\+java\end{DoxyCompactItemize}

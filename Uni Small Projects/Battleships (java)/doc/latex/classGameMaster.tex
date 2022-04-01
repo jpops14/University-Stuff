@@ -1,0 +1,117 @@
+\hypertarget{classGameMaster}{}\doxysection{Game\+Master Class Reference}
+\label{classGameMaster}\index{GameMaster@{GameMaster}}
+
+
+Collaboration diagram for Game\+Master\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameMaster_aaa148898d218d588bb1f268e2520cf24}{Game\+Master}} (\mbox{\hyperlink{classGameState}{Game\+State}} newstate)
+\item 
+String \mbox{\hyperlink{classGameMaster_ace52d8d90f9525033715ea5e6b407507}{save\+Game}} (String filepath)
+\item 
+String \mbox{\hyperlink{classGameMaster_ad1bc1260777868dc0eb4afb742afdd26}{make\+Move}} (int x, int y)
+\item 
+int \mbox{\hyperlink{classGameMaster_ab6ac434fe9cc441e435ff95df2445343}{get\+Turn}} ()
+\item 
+int \mbox{\hyperlink{classGameMaster_ad9755c131dc114cc127988e081445c05}{get\+Player\+Health}} (int nr)
+\item 
+int \mbox{\hyperlink{classGameMaster_afe2bdff3f205a6a77c760c5010585e2d}{get\+Field}} (int player, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Runs the game by accepting input from player and modyfing the gamestate accordingly until the game is finished. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameMaster_aaa148898d218d588bb1f268e2520cf24}\label{classGameMaster_aaa148898d218d588bb1f268e2520cf24}} 
+\index{GameMaster@{GameMaster}!GameMaster@{GameMaster}}
+\index{GameMaster@{GameMaster}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{GameMaster()}{GameMaster()}}
+{\footnotesize\ttfamily Game\+Master.\+Game\+Master (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameState}{Game\+State}}}]{newstate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new \mbox{\hyperlink{classGameMaster}{Game\+Master}} which can run the game. 
+\begin{DoxyParams}{Parameters}
+{\em newstate} & -\/ gamestate to be run by \mbox{\hyperlink{classGameMaster}{Game\+Master}}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGameMaster_afe2bdff3f205a6a77c760c5010585e2d}\label{classGameMaster_afe2bdff3f205a6a77c760c5010585e2d}} 
+\index{GameMaster@{GameMaster}!getField@{getField}}
+\index{getField@{getField}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{getField()}{getField()}}
+{\footnotesize\ttfamily int Game\+Master.\+get\+Field (\begin{DoxyParamCaption}\item[{int}]{player,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reveals content of given player\textquotesingle{}s boards (field designated by given coordinates). 
+\begin{DoxyParams}{Parameters}
+{\em player} & player number. \\
+\hline
+{\em x} & rows. \\
+\hline
+{\em y} & columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+content of designated field. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameMaster_ad9755c131dc114cc127988e081445c05}\label{classGameMaster_ad9755c131dc114cc127988e081445c05}} 
+\index{GameMaster@{GameMaster}!getPlayerHealth@{getPlayerHealth}}
+\index{getPlayerHealth@{getPlayerHealth}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{getPlayerHealth()}{getPlayerHealth()}}
+{\footnotesize\ttfamily int Game\+Master.\+get\+Player\+Health (\begin{DoxyParamCaption}\item[{int}]{nr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns designated player\textquotesingle{}s hitpoints. 
+\begin{DoxyParams}{Parameters}
+{\em nr} & nr of player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+remaining hitpoints of player with given nr. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameMaster_ab6ac434fe9cc441e435ff95df2445343}\label{classGameMaster_ab6ac434fe9cc441e435ff95df2445343}} 
+\index{GameMaster@{GameMaster}!getTurn@{getTurn}}
+\index{getTurn@{getTurn}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{getTurn()}{getTurn()}}
+{\footnotesize\ttfamily int Game\+Master.\+get\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns number of current turn. \begin{DoxyReturn}{Returns}
+current turn; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameMaster_ad1bc1260777868dc0eb4afb742afdd26}\label{classGameMaster_ad1bc1260777868dc0eb4afb742afdd26}} 
+\index{GameMaster@{GameMaster}!makeMove@{makeMove}}
+\index{makeMove@{makeMove}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{makeMove()}{makeMove()}}
+{\footnotesize\ttfamily String Game\+Master.\+make\+Move (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Orders game to register attack on given coordinates. 
+\begin{DoxyParams}{Parameters}
+{\em x} & row letter. \\
+\hline
+{\em y} & column number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+attack report. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameMaster_ace52d8d90f9525033715ea5e6b407507}\label{classGameMaster_ace52d8d90f9525033715ea5e6b407507}} 
+\index{GameMaster@{GameMaster}!saveGame@{saveGame}}
+\index{saveGame@{saveGame}!GameMaster@{GameMaster}}
+\doxysubsubsection{\texorpdfstring{saveGame()}{saveGame()}}
+{\footnotesize\ttfamily String Game\+Master.\+save\+Game (\begin{DoxyParamCaption}\item[{String}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Saves gamestate to a file with given path. 
+\begin{DoxyParams}{Parameters}
+{\em filepath} & path for save file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Save report 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Master.\+java\end{DoxyCompactItemize}

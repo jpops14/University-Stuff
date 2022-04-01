@@ -1,0 +1,92 @@
+\hypertarget{classBoard}{}\doxysection{Board Class Reference}
+\label{classBoard}\index{Board@{Board}}
+
+
+Inheritance diagram for Board\+:
+% FIG 0
+
+
+Collaboration diagram for Board\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBoard_ab5e792f71e2fbff747bf7b52859f2a98}{Board}} ()
+\item 
+int \mbox{\hyperlink{classBoard_a56053650d88a1a023bc8d1d5eb8cc58a}{attack}} (int x, int y)
+\item 
+Boolean \mbox{\hyperlink{classBoard_a5e32912075649b4c68dda3b8189b18d7}{place\+Ship}} (int x, int y, int nr, int length, Boolean horizontal)
+\item 
+int \mbox{\hyperlink{classBoard_adfece951153d642cbc01cf39e6fb033e}{get\+Field}} (int x, int y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classBoard}{Board}} class contains a matrix of integers which represents player\textquotesingle{}s board. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBoard_ab5e792f71e2fbff747bf7b52859f2a98}\label{classBoard_ab5e792f71e2fbff747bf7b52859f2a98}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board.\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates new \mbox{\hyperlink{classBoard}{Board}} filled with empty fields (desribed by int=14). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBoard_a56053650d88a1a023bc8d1d5eb8cc58a}\label{classBoard_a56053650d88a1a023bc8d1d5eb8cc58a}} 
+\index{Board@{Board}!attack@{attack}}
+\index{attack@{attack}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily int Board.\+attack (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Registering an attack on field desribed by given coordinates x and y. Returns valuve of attacked field. 
+\begin{DoxyParams}{Parameters}
+{\em x} & row \\
+\hline
+{\em y} & column \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBoard_adfece951153d642cbc01cf39e6fb033e}\label{classBoard_adfece951153d642cbc01cf39e6fb033e}} 
+\index{Board@{Board}!getField@{getField}}
+\index{getField@{getField}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getField()}{getField()}}
+{\footnotesize\ttfamily int Board.\+get\+Field (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns value of map\textquotesingle{}s field desribed by given coordinates. 
+\begin{DoxyParams}{Parameters}
+{\em x} & row \\
+\hline
+{\em y} & column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of map\mbox{[}x\mbox{]}\mbox{[}y\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_a5e32912075649b4c68dda3b8189b18d7}\label{classBoard_a5e32912075649b4c68dda3b8189b18d7}} 
+\index{Board@{Board}!placeShip@{placeShip}}
+\index{placeShip@{placeShip}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{placeShip()}{placeShip()}}
+{\footnotesize\ttfamily Boolean Board.\+place\+Ship (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{nr,  }\item[{int}]{length,  }\item[{Boolean}]{horizontal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Placing a ship (designated with nr) on the board extending from coordinates x and y either vertically downwards or horizontally rightwards. Returns true if placement was possible, otherwise returns false. 
+\begin{DoxyParams}{Parameters}
+{\em x} & row \\
+\hline
+{\em y} & column \\
+\hline
+{\em nr} & ship\textquotesingle{}s number \\
+\hline
+{\em length} & ship\textquotesingle{}s length \\
+\hline
+{\em horizontal} & ship\textquotesingle{}s orientation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: was placement succesful? 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Board.\+java\end{DoxyCompactItemize}

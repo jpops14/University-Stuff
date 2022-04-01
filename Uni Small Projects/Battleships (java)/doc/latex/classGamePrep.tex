@@ -1,0 +1,83 @@
+\hypertarget{classGamePrep}{}\doxysection{Game\+Prep Class Reference}
+\label{classGamePrep}\index{GamePrep@{GamePrep}}
+
+
+Collaboration diagram for Game\+Prep\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGamePrep_a9358c00a7e80458bfb1a2de352ed3811}{Game\+Prep}} ()
+\item 
+String \mbox{\hyperlink{classGamePrep_ae41806ea51fe9da7401677950c01695c}{load\+Game}} (String filepath)
+\item 
+String \mbox{\hyperlink{classGamePrep_aab732f40f9a6f6b876fe6b1df1433c0c}{make\+Placement}} (int x, int y, Boolean horizontal)
+\item 
+\mbox{\hyperlink{classGameState}{Game\+State}} \mbox{\hyperlink{classGamePrep_a09ce3fc835c104b2070413bc245e4a51}{encapsulate}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Prepares a new gamestate or loads a saved gamestate. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGamePrep_a9358c00a7e80458bfb1a2de352ed3811}\label{classGamePrep_a9358c00a7e80458bfb1a2de352ed3811}} 
+\index{GamePrep@{GamePrep}!GamePrep@{GamePrep}}
+\index{GamePrep@{GamePrep}!GamePrep@{GamePrep}}
+\doxysubsubsection{\texorpdfstring{GamePrep()}{GamePrep()}}
+{\footnotesize\ttfamily Game\+Prep.\+Game\+Prep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes \mbox{\hyperlink{classGamePrep}{Game\+Prep}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGamePrep_a09ce3fc835c104b2070413bc245e4a51}\label{classGamePrep_a09ce3fc835c104b2070413bc245e4a51}} 
+\index{GamePrep@{GamePrep}!encapsulate@{encapsulate}}
+\index{encapsulate@{encapsulate}!GamePrep@{GamePrep}}
+\doxysubsubsection{\texorpdfstring{encapsulate()}{encapsulate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGameState}{Game\+State}} Game\+Prep.\+encapsulate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Finalizes preparation and creates a \mbox{\hyperlink{classGameState}{Game\+State}} using initialized boards and ships. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classGameState}{Game\+State}} prepared for playing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGamePrep_ae41806ea51fe9da7401677950c01695c}\label{classGamePrep_ae41806ea51fe9da7401677950c01695c}} 
+\index{GamePrep@{GamePrep}!loadGame@{loadGame}}
+\index{loadGame@{loadGame}!GamePrep@{GamePrep}}
+\doxysubsubsection{\texorpdfstring{loadGame()}{loadGame()}}
+{\footnotesize\ttfamily String Game\+Prep.\+load\+Game (\begin{DoxyParamCaption}\item[{String}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Loads saved \mbox{\hyperlink{classGameState}{Game\+State}}. 
+\begin{DoxyParams}{Parameters}
+{\em filepath} & path for file with saved \mbox{\hyperlink{classGameState}{Game\+State}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loading operation report. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGamePrep_aab732f40f9a6f6b876fe6b1df1433c0c}\label{classGamePrep_aab732f40f9a6f6b876fe6b1df1433c0c}} 
+\index{GamePrep@{GamePrep}!makePlacement@{makePlacement}}
+\index{makePlacement@{makePlacement}!GamePrep@{GamePrep}}
+\doxysubsubsection{\texorpdfstring{makePlacement()}{makePlacement()}}
+{\footnotesize\ttfamily String Game\+Prep.\+make\+Placement (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{Boolean}]{horizontal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Processes ship placement request. 
+\begin{DoxyParams}{Parameters}
+{\em x} & row. \\
+\hline
+{\em y} & column. \\
+\hline
+{\em nr} & placed ship\textquotesingle{}s number. \\
+\hline
+{\em length} & placed ship\textquotesingle{}s length \\
+\hline
+{\em horizontal} & placed ship\textquotesingle{}s orientation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+placement report. 
+\end{DoxyReturn}
+System.\+out.\+println(horizontal); ~\newline
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Prep.\+java\end{DoxyCompactItemize}

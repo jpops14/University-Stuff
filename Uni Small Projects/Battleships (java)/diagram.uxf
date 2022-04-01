@@ -1,0 +1,106 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>390</x><y>600</y><w>160</w><h>110</h></coordinates><panel_attributes>Ships
+--
+-HP: int[14]
+
+--
++hit(id: int): String
++getShipHP(id: int): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>640</y><w>210</w><h>180</h></coordinates><panel_attributes>GameState
+--
+-turn: int
+-map: Board[2]
+-playerHP: int[2]
+-ships: Ships
+--
++turnInc(): void
++getTurn(): int
++attack(x: int, y: int): String
++getPlayerHealth(nr: int): int
++getField(player: int, x: int, y: int): int
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>360</y><w>290</w><h>180</h></coordinates><panel_attributes>GamePrep
+--
+-ships_placed: int
+-p1: Board
+-p2: Board
+-ships: Ships
+-loaded: GameState
+
+--
++loadGame(filepath: String): String
++makePlacement(x: int, y: int, horizontal: Boolean)
++encapsulate(): GameState
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>690</y><w>210</w><h>130</h></coordinates><panel_attributes>GameMaster
+--
+-game: GameState
+--
++saveGame(filepath: String): String
++makeMove(x: int, y: int): String
++getTurn(): int
++getPlayerHealth(nr: int): int
++getField(player:int , x: int, y: int): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>50</y><w>310</w><h>240</h></coordinates><panel_attributes>GamePrepGUI
+--
+-setup: GamePrep
+-panel: JPanel
+-display_game: GameMasterGUI
+-map_grid: JPanel
+-field: JLabel[11][11]
+-report_field: JLabel
+-row_selector: JComboBox&lt;String&gt;
+-column_selector: JComboBox&lt;String&gt;
+-orientation_selector: JComboBox&lt;String&gt;
+-save_path: JTextField
+-execute_button: JButton
+-load_button: JButton
+-counter: int
+-length: int[14]
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>250</y><w>470</w><h>330</h></coordinates><panel_attributes>GameMasterGUI
+--
+-game: GameMaster
+-panel: JPanel
+-map_grid: JPanel[2]
+-field: JLabel[2][11][11]
+-report_field: JLabel
+-row_selector: JComboBox&lt;String&gt;
+-column_selector: JComboBox&lt;String&gt;
+-save_path: JTextField
+-execute_button: JButton
+-save_button: JButton
+-center: JPanel
+-status: JPanel
+-hp1: JLabel
+-hp2: JLabel
+-turn_display: JLabel
+-health1: Integer
+-health2: Integer
+-turn: Integer
+--
+-displayMaps(fields: JLabel[2][11][11], option: int, controller: GameMaster): void
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>730</y><w>370</w><h>120</h></coordinates><panel_attributes>Board
+--
+-map: int[10][10]
+--
++attack(x: int,y: int) : int
++placeShip(x: int, y: int, nr: int , length: int, horizontal: Boolean)
++getField(x: int, y: int): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>850</y><w>100</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Serializable</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>130</y><w>100</w><h>30</h></coordinates><panel_attributes>JFrame</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>840</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>700</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>810</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>120</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-
+Extends</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>150</y><w>70</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-
+Extends</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>280</y><w>60</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+setup</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>530</y><w>60</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+ships</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>660</y><w>90</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+ships</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>760</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+2
+map</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>530</y><w>40</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+p1
+p2</panel_attributes><additional_attributes>10;200;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>530</y><w>60</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+loaded</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>730</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+game</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>250</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+display_game</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>570</y><w>60</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+game</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element></diagram>

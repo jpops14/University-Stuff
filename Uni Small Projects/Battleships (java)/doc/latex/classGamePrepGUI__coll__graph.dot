@@ -1,0 +1,29 @@
+digraph "GamePrepGUI"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="GamePrepGUI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="JFrame",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" setup" ];
+  Node3 [label="GamePrep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGamePrep.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ships" ];
+  Node4 [label="Ships",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classShips.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Serializable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p1\np2" ];
+  Node6 [label="Board",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBoard.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" loaded" ];
+  Node7 [label="GameState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameState.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ships" ];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" maps" ];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" display_game" ];
+  Node8 [label="GameMasterGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameMasterGUI.html",tooltip=" "];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" game" ];
+  Node9 [label="GameMaster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameMaster.html",tooltip=" "];
+  Node7 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" game" ];
+}
